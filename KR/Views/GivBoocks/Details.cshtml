@@ -1,0 +1,42 @@
+﻿@model KR.Models.GivBoock
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>GivBoock</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GivUser)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GivUser.UserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GivBook)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GivBook.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateGiv)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateGiv)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GivDateReturn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GivDateReturn)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GivBoockId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

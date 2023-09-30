@@ -1,0 +1,28 @@
+﻿@model KR.Models.User
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h1>Taken your books</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model.Books)
+    {
+        <div class="col">
+            <div class="card h-100">
+                <img src="@item.ImgUrl" class="card-img-top ph" height="400px" alt="cover_book">
+                <div class="card-body">
+                    <h5 class="card-title">Name: @item.Name</h5>
+                    <p class="card-text">Author: @item.Author</p>
+                    <p class="card-text">Status: @item.State</p>
+
+                    <a asp-controller="Workers" asp-for="BookId" asp-action="Index" asp-route-bookId="@item.Id" class="btn btn-success">Get it</a>
+                    <a href="@Url.Action("Details", "Books", new { id = item.Id })" class="btn btn-info">More details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

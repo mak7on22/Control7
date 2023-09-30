@@ -1,0 +1,53 @@
+﻿@model IEnumerable<KR.Models.GivBoock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GivUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GivBook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateGiv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GivDateReturn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GivUser.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GivBook.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateGiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GivDateReturn)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.GivBoockId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.GivBoockId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.GivBoockId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

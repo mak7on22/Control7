@@ -1,0 +1,24 @@
+﻿@model KR.Models.User
+
+<h1>Личный кабинет</h1>
+
+<p>Имя пользователя: @Model.UserName</p>
+<p>Имя: @Model.UserFirstName</p>
+<p>Электронная почта: @Model.UserEmail</p>
+<p>Номер телефона: @Model.UserPhone</p>
+
+<h2>Ваши книги</h2>
+@if (Model.Books != null && Model.Books.Count > 0)
+{
+    <ul>
+        @foreach (var book in Model.Books)
+        {
+            <li>@book.Name by @book.Author</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Вы не взяли ни одной книги.</p>
+}
+
