@@ -31,3 +31,15 @@ body {
 .fgs {
     background-color: rgba(0, 0, 0, 0.6);
 }
+.fgss {
+    margin-top:10px;
+    background-color: rgb(255 255 255 / 71%);
+    display:flex;
+}
+.fgsss {
+    margin-top: 10px;
+    background-color: rgb(255 255 255 / 71%);
+}
+.imgDetals {
+    width: 300px;
+}
