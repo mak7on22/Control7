@@ -9,6 +9,9 @@
         pageNo = pager.CurrentPage;
     }
 }
+<a asp-action="Index" class="btn btn-success" asp-route-sortState="@ViewBag.DataCteateSort">Сортировать по дате</a>
+
+
 <partial name="_pager" model="@pager" />
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model)
