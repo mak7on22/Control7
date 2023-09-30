@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url('../fon.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.imgDetails2 {
+    height: 500px;
+}
+.pkms {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.fgs {
+    background-color: rgba(0, 0, 0, 0.6);
+}
